@@ -58,4 +58,17 @@ function showCreateView() {
   }
 }
 
+function mostrarLis() {
+  console.log("entro");
+  const url = 'http://localhost:3000/enlistar'
+  fetch(url).then(
+    response => response.json()
+  ).then(
+    data => {
+      document.querySelector("#notes").innerHTML = data.text
+    }
+  )
+  console.log("salido");
+}
+
 
