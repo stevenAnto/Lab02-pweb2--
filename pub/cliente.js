@@ -6,7 +6,7 @@ function showHome() {
   const notes = document.querySelector("#notes");
   notes.innerHTML = `
     <h2>Presentation</h2>
-    <p>Este sistema fue desarrollado por alumnos del segundo año de la Escuela Profesional de Ingeniería de Sistemas, de la Universidad Nacional de San Agustín de Arequipa</p>
+    <p>Este sistema fue desarrollado por alumnos del primer año de la Escuela Profesional de Ingeniería de Sistemas, de la Universidad Nacional de San Agustín de Arequipa</p>
     <p>El sistema fué desarrollado usando estas tecnologías:</p>
     <ul class="skills">
       <li class="skills_skill">HTML y CSS</li>
@@ -21,6 +21,7 @@ function showHome() {
 function showNotes() {
   const notes = document.querySelector("#notes");
   notes.innerHTML = "<h2>List of Notes</h2>";
+  mostrarLis();
 }
 
 function showCreateView() {
@@ -56,4 +57,16 @@ function showCreateView() {
 
     return false;
   }
+}
+function mostrarLis() {
+  console.log("entro");
+  const url = 'http://localhost:3000/enlistar'
+  fetch(url).then(
+    response => response.json()
+  ).then(
+    data => {
+      document.querySelector("#notes").innerHTML = data.text
+    }
+  )
+  console.log("salido");
 }
