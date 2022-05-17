@@ -1,4 +1,5 @@
 const path = require('path');
+const fsd = require('fs');
 const bodyParser = require('body-parser');
 const express = require('express');
 const app = express();
@@ -23,7 +24,8 @@ app.post('/crear', (request, response) => {
 
   var fs = require('fs');
 
-  fs.appendFile(titulo + '.md', texto, function (err) {
+  let nombreFolder = 'files/'+titulo+'.md';
+  fs.appendFile(nombreFolder, texto, function (err) {
     if (err) throw err;
     console.log('Saved!');
   });
@@ -31,3 +33,27 @@ app.post('/crear', (request, response) => {
   response.setHeader('Content-type', 'html/plain');
   response.send('Datos guardados con éxito');
 });
+
+app.get('/enlistar', (request, response) => {
+  console.log("entro entlta");
+  fsd.readdir('files', 'utf8',
+    (err, data) => {
+      if (err) {
+	console.error(err)
+	response.status(500).json({
+	  error: 'message'
+	})
+	return
+      }
+      response.json({
+	text : data
+      })
+    })
+  console.log("saliendo");
+})
+
+/*app.get('/enlistar',(request, response)=>{
+  response.setHeader('Content-type', 'text/plain');
+  let files = fsd.readdirSync("files");
+
+})*/
