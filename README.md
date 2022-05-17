@@ -79,7 +79,7 @@
 
 ## III. CONCLUSIONES
 
-   - Nodejs es un framework que nos ha agradado bastante y hace gala de la programacion funcional, por ejemplo, para enlistar los archivos que tenemos guardados en el servidor no necesitamos iterar con un clasico for, sino con una funcion de objetivo 'fs' que nos proporciona nodejs. Varias soluciones se resuelve en una o dos lineas, como por ejemplo la traduccion de markdown a html.
+   - Nodejs es un framework que nos ha agradado bastante y hace gala de la programacion funcional, por ejemplo, para enlistar los archivos que tenemos guardados en el servidor no necesitamos iterar con un clasico for, sino con una funcion del objeto de 'fs'(fyleSystem), el cual es proporcionado por  nodejs. Varias soluciones se resuelve en una o dos lineas, como por ejemplo la traduccion de markdown a html.
     
 
 # RETROALIMENTACIÓN GENERAL
