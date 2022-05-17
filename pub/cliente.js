@@ -19,7 +19,7 @@ function showHome() {
 }
 
 function showNotes() {
-  const notes = document.querySelector("#notes");
+  var notes = document.querySelector("#notes");
   notes.innerHTML = "<h2>List of Notes</h2>";
   mostrarLis();
 }
@@ -60,13 +60,19 @@ function showCreateView() {
 }
 function mostrarLis() {
   console.log("entro");
-  const url = 'http://localhost:3000/enlistar'
+  const url = 'http://localhost:3000/enlistar';
   fetch(url).then(
     response => response.json()
   ).then(
     data => {
-      document.querySelector("#notes").innerHTML = data.text
+      document.querySelector("#notes").innerHTML= data.text;
+      var txt= document.querySelector("#notes").innerHTML;
+      console.log(txt);
+      txt= "<h2>List of Notes</h2><br><ol><li>" +txt.replace(/,/g, "</li><li>") + "</li></ol>";
+      console.log(txt);
+      document.querySelector("#notes").innerHTML= txt;
     }
   )
-  console.log("salido");
+  
+  //document.querySelector("#notes").innerHTML
 }
