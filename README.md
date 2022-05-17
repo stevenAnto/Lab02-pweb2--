@@ -114,6 +114,7 @@ Los otros dos brunch extras a la creaciòn de los mètodos fueron realizados par
 - ¿Entiende la expresión regular en el código y se da cuenta de para qué es útil?
  <br>Las expresiones regulares nos permiten extraer partes de una cadena obteniendo de esta manera sus divesos componentes y agrupandolos de acuerdo a sus diversas caracterizticas. Su importancia radica en la extraccion de partes de la URL </br>
 - Note que la respuesta del servidor está en formato JSON, ¿Habrá alguna forma de verla directamente?
+ <br>Se puede ver de forma directa por medio de los codigos de estado de HTTP, los cuales son mensajes del servidor que permiten conocer el estado de la recepciòn de la solicitud. </br>
 
 ## III. CONCLUSIONES
 - Hemos aprendido que git en conjunto con github nos ofrecen herramientas para desarrollar proyectos(código) de manera colaborativa(equipo), de manera descentralizada y segura (ya que uno crea espacios trabajos paralelos {ramas}), sin afectar el codigo  fuente de producción .
