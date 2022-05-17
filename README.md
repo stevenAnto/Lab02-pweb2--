@@ -73,12 +73,12 @@
  <br>Las expresiones regulares nos permiten extraer partes de una cadena obteniendo de esta manera sus divesos componentes y agrupandolos de acuerdo a sus diversas caracterizticas. En el codigo se usa para introducir una etiqueta <br> en cada salto de linea.</br>
 - Note que la respuesta del servidor está en formato JSON, ¿Habrá alguna forma de verla directamente?
  <br>Se puede ver de forma directa por medio de los codigos de estado de HTTP, los cuales son mensajes del servidor que permiten conocer el estado de la recepciòn de la solicitud. </br>
- <br>Si se puede, simplemente ponemos localhost/<nombre de la peticion que hacemos>
+ <br>Si se puede, simplemente ponemos localhost/'<nombre de la peticion que hacemos>'
 
 ## III. CONCLUSIONES
-- Hemos aprendido que git en conjunto con github nos ofrecen herramientas para desarrollar proyectos(código) de manera colaborativa(equipo), de manera descentralizada y segura (ya que uno crea espacios trabajos paralelos {ramas}), sin afectar el codigo  fuente de producción .
-- Pudimos realizar el laboratorio, sin mayor problema gracias a la facilidad de uso de Git y Github.
-- El uso de ramas para programar es una gran herramienta para poder trabajar en equipo en git de manera más eficiente
+
+    Nodejs es un framework que nos ha agradado bastante y hace gala de la programacion funcional, por ejemplo, para enlistar los archivos que tenemos guardados en el servidor no necesitamos iterar con un clasico for, sino con una funcion de objetivo 'fs' que nos proporciona nodejs. Varias soluciones se resuelve en una o dos lineas, como por ejemplo la traduccion de markdown a html.
+    
 
 # RETROALIMENTACIÓN GENERAL
 <br></br>
