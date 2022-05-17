@@ -23,7 +23,8 @@ app.post('/crear', (request, response) => {
 
   var fs = require('fs');
 
-  fs.appendFile(titulo + '.md', texto, function (err) {
+  var NombreFolder ='Directorio/'+titulo+'.md';
+  fs.appendFile(NombreFolder, texto, function (err) {
     if (err) throw err;
     console.log('Saved!');
   });
