@@ -26,7 +26,7 @@ app.post('/crear', (request, response) => {
 
   var fs = require('fs');
 
-  var NombreFolder ='Directorio/'+titulo+'.md';
+  let NombreFolder ='Directorio/'+titulo+'.md';
   fs.appendFile(NombreFolder, texto, function (err) {
     if (err) throw err;
     console.log('Saved!');
