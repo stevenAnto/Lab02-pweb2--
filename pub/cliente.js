@@ -28,9 +28,9 @@ function showCreateView() {
   notes.innerHTML = `
     <h2>Create Note</h2>
     <form id="createNoteForm">
-      <input type="text" id="title" placeholder="Titulo">
+      <input type="text" id="title" placeholder="Titulo"><br>
       <textarea id="markdownContent" placeholder="Contenido en Markdown"></textarea>
-      <input type="submit" value="Crear">
+      <input type="submit" id="boton" value="Crear">
     </form>
   `;
 
