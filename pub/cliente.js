@@ -6,7 +6,7 @@ function showHome() {
   const notes = document.querySelector("#notes");
   notes.innerHTML = `
     <h2>Presentation</h2>
-    <p>Este sistema fue desarrollado por alumnos del primer año de la Escuela Profesional de Ingeniería de Sistemas, de la Universidad Nacional de San Agustín de Arequipa</p>
+    <p>Este sistema fue desarrollado por alumnos del segundo año de la Escuela Profesional de Ingeniería de Sistemas, de la Universidad Nacional de San Agustín de Arequipa</p>
     <p>El sistema fué desarrollado usando estas tecnologías:</p>
     <ul class="skills">
       <li class="skills_skill">HTML y CSS</li>
