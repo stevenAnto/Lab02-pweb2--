@@ -35,22 +35,23 @@ function showCreateView() {
   `;
 
   document.querySelector("#createNoteForm").onsubmit = function () {
-    const title = document.querySelector("#title").value;
-    const markdownContent = document.querySelector("#markdownContent").value;
+    const titulo = document.querySelector("#title").value;
+    const texto = document.querySelector("#markdownContent").value;
 
     const url = "http://localhost:3000/crear";
-    const noteData = {title, markdownContent};
+    const noteData = {titulo, texto};
+    //console.log(noteData)
     const request = {
-      method: "GET",
+      method: "POST",
       headers: {
 	"Content-Type": "application/json"
-      }
-      body: JSON.stringify(noteData)
+      },
+      body: JSON.stringify(noteData),
     };
 
     fetch(url, request)
       .then(response => {return response.text()})
-      .then(data => {console.log(data);})
+      .then(data =>{alert(data)})
       .catch(error => console.log(error));
 
     return false;

@@ -15,14 +15,15 @@ app.get('/', (request, response) => {
   response.sendFile(path.resolve(__dirname, 'index.html'));
 });
 
-app.get('/crear', (request, response) => {
+app.post('/crear', (request, response) => {
   response.setHeader('Content-type', 'text/plain');
-  const titulo = request.body.nombre;
+  const titulo = request.body.titulo;
   const texto = request.body.texto;
+  console.log(titulo,texto);
 
   var fs = require('fs');
 
-  fs.appendFile(nombre + '.txt', titulo, function (err) {
+  fs.appendFile(titulo + '.md', texto, function (err) {
     if (err) throw err;
     console.log('Saved!');
   });
