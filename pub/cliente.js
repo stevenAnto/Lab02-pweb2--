@@ -38,18 +38,18 @@ function showCreateView() {
     const title = document.querySelector("#title").value;
     const markdownContent = document.querySelector("#markdownContent").value;
 
-    const url = "https://pokeapi.co/api/v2/pokemon/ditto";
+    const url = "http://localhost:3000/crear";
     const noteData = {title, markdownContent};
     const request = {
       method: "GET",
       headers: {
 	"Content-Type": "application/json"
       }
-      // body: JSON.stringify(noteData)
+      body: JSON.stringify(noteData)
     };
 
     fetch(url, request)
-      .then(response => response.json())
+      .then(response => {return response.text()})
       .then(data => {console.log(data);})
       .catch(error => console.log(error));
 
